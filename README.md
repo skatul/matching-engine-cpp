@@ -1,57 +1,50 @@
-Match Engine in C++
-A high-performance trade matching engine written in C++, designed for real-time financial markets. This project aims to deliver a fast and efficient core for executing and matching orders in an order-driven exchange.
+# Match Engine in C++
 
-🚀 Key Features
-Limit order book with O(1) access for top-of-book operations
+A high-performance trade matching engine written in C++, designed for real-time financial markets. This project delivers a fast and efficient core for executing and matching orders in an order-driven exchange.
 
-Support for limit and market orders, IOC/FOK order types
+## 🚀 Key Features
 
-Price-time priority matching logic
+- Limit order book with O(1) access for top-of-book operations  
+- Support for limit and market orders, IOC/FOK order types  
+- Price-time priority matching logic  
+- Real-time order insertion, cancellation, and execution  
+- Multithreaded event processing for optimal latency  
+- Logging and performance metrics collection  
 
-Real-time order insertion, cancellation, and execution
+## ⚙️ Tech Stack
 
-Multithreaded event processing for optimal latency
+- **Language:** C++17  
+- **Build System:** CMake  
+- **Testing Framework:** Google Test  
+- **Multithreading:** std::thread, condition_variable  
+- **Optional:** Boost.Asio or ZeroMQ for future gateway messaging  
 
-Logging and performance metrics collection
+## 📁 Project Structure
 
-⚙️ Tech Stack
-Language: C++17
 
-Build System: CMake
+## 📈 Performance Goals
 
-Testing Framework: Google Test
+- Target latency: sub-100µs for order matching  
+- Target throughput: 100K+ orders per second  
 
-Multithreading: std::thread, condition_variable
+## 🧭 Future Enhancements
 
-Optional: Boost.Asio or ZeroMQ for future gateway messaging
+- Add FIX/FAST protocol support for external connectivity  
+- Introduce persistent storage with RocksDB for audit trails  
+- Web dashboard for real-time book visualization  
 
-📁 Project Structure
-/src
-  Order.hpp / OrderBook.hpp / MatchingEngine.hpp  
-/tests
-  Unit tests for order and matching logic  
-/scripts
-  Startup scripts and performance test drivers  
-README.md
-CMakeLists.txt
-📈 Performance Goals
-Target latency: sub-100µs for order matching Target throughput: 100K+ orders per second
+## 🛠️ Getting Started
 
-🧭 Future Enhancements
-Add FIX/FAST protocol support for external connectivity
-
-Introduce persistent storage with RocksDB for audit trails
-
-Web dashboard for real-time book visualization
-
-🛠️ Getting Started
 To build the project:
 
-bash
+```bash
 mkdir build && cd build  
 cmake ..  
 make  
-Run unit tests:
+```
 
-bash
+To run unit tests:
+
+```bash
 ./run_tests
+```
