@@ -42,5 +42,8 @@ mkdir build && cd build
 cmake ..  
 make  
 
+To run unit tests:
+
+```bash
 ./run_tests
 
